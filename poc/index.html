@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Rule Studio</title>
+<link rel="stylesheet" href="/styles.css">
+<script type="module" src="/app.js"></script>
+</head><body>
+<header class="top">
+  <div class="brand"><span class="logo">◆</span> Panther Rule Studio <span class="tag">PoC · no AI</span></div>
+  <ol class="flow" id="flow">
+    <li data-v="library"><b>1</b> Pick a rule</li>
+    <li data-v="analyze"><b>2</b> Understand it</li>
+    <li data-v="edit"><b>3</b> Edit &amp; test live</li>
+  </ol>
+  <div class="spacer"></div>
+  <button class="ghost" id="newbtn" title="Create a new rule (N)">＋ New rule</button>
+  <div class="feed" id="feed" title="Status of the live event feed"><span class="dot"></span><span id="feedtxt">Connecting…</span></div>
+  <button class="ghost small" id="outage" title="Demo: pretend the live feed went down">Simulate outage</button>
+</header>
+<div class="shell">
+  <nav class="side" id="nav">
+    <a data-v="library" title="Library (L)"><span>▤</span>Library</a>
+    <a data-v="analyze" title="Analyze (A)"><span>◎</span>Analyze</a>
+    <a data-v="edit" title="Edit (E)"><span>✎</span>Edit</a>
+    <a data-v="create" title="New rule (N)"><span>＋</span>Create</a>
+    <a data-v="validate" title="Validate (V)"><span>✓</span>Validate</a>
+    <a data-v="live" title="Live analysis (G)"><span>∿</span>Live</a>
+    <div class="navfoot"><kbd>?</kbd> shortcuts</div>
+  </nav>
+  <main id="view" aria-live="polite"><div class="loading">Loading…</div></main>
+</div>
+<div class="overlay" id="help" hidden><div class="dialog">
+  <h2>Keyboard shortcuts</h2>
+  <table><tr><td><kbd>/</kbd></td><td>Search rules</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Move through the library</td></tr>
+  <tr><td><kbd>Enter</kbd></td><td>Open the selected rule</td></tr><tr><td><kbd>L</kbd> <kbd>A</kbd> <kbd>E</kbd> <kbd>V</kbd> <kbd>G</kbd></td><td>Library, Analyze, Edit, Validate, Live</td></tr>
+  <tr><td><kbd>N</kbd></td><td>New rule wizard</td></tr><tr><td><kbd>Esc</kbd></td><td>Close this / leave a field</td></tr></table>
+  <button class="primary" id="helpclose">Got it</button></div></div>
+<div class="toast" id="toast" hidden></div>
+</body></html>
